@@ -86,27 +86,7 @@ while True:
                         send_email(msg)
 
 
-                # if now - tx.bought_at >= timedelta(seconds=1):
-                #     seller = JupiterSwap()
-                #     decimals = seller.check_decimals_of_SPL(output_mint=wallet)
-                #     amount = int(tx.amount_of_coins * 10**decimals)
-                #     human_readable_amount = Decimal(amount / 10**decimals).quantize(Decimal('0.00001'), rounding=ROUND_DOWN)
-                #     result = (Decimal(human_readable_amount * price) - Decimal(tx.invested_amount)).quantize(Decimal('0.00001'), rounding=ROUND_DOWN)
-                #
-                #     price_sol = check_main_mint_price()
-                #     valid = seller.jupiter_swap_transaction(input_mint=wallet, output_mint=MAIN_MINT, amount=amount)
-                #     if valid:
-                #         sold_coin(tx, result)
-                #         if wallet in tx_check_times:
-                #             del tx_check_times[wallet]
-                #
-                #         msg=(
-                #             f"Subject: Sold a coin not quite at the target\n\n"
-                #             f"You have successfully sold {human_readable_amount} coins  at a current price of {price}.\n\n"
-                #             f"This is the address of the coin: {wallet}\n\n"
-                #             f"You didn't quite make it this time but you still got the amount of: "
-                #             f" {Decimal(((human_readable_amount * price) / price_sol).quantize(Decimal('0.00001')))} Sol")
-                #         send_email(msg)
+
 
 
     time.sleep(2)
